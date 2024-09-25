@@ -1,7 +1,12 @@
 import Image from "next/image";
 import { Inter, Inter_Tight } from "next/font/google";
 import { Separator } from "@/components/ui/separator"
+
+import { Button } from "@/components/ui/button";
+import Link from "next/link";
 const inter = Inter_Tight({ subsets: ["latin"] });
+import { buttonVariants } from "@/components/ui/button"
+
 import {
   Tooltip,
   TooltipContent,
@@ -37,7 +42,9 @@ export default function Home() {
 
       <div className="flex flex-col border-l-4 duration-300 border-b-4 border-sky-500 hover:border-sky-700 bg-gradient-to-r from-zinc-50 to-zinc-100 rounded-lg p-2">
         <h2 className={`${inter.className} text-xl font-semibold text-zinc-800`}>Experience</h2>
-        <Separator className=""></Separator>
+
+        <Separator className="mt-2 bg-sky-200"></Separator>
+
         <Accordion type="single" collapsible>
           <AccordionItem value="item-1">
             <AccordionTrigger>Back-end</AccordionTrigger>
